@@ -1,0 +1,9 @@
+{
+  "name": "File Operations",
+  "category": "Tools",
+  "description": "Read, write, append, list, delete, and check files or directories on the local filesystem.",
+  "author": "SidusLabs",
+  "version": "1.0.0",
+  "tags": ["files", "filesystem", "io"],
+  "readme": "Read, write, append, list, delete, check existence of, or create files and directories on the local filesystem.\n\n**Actions** (pass as the `action` param):\n- `read` -- read a file's contents (path)\n- `write` -- overwrite a file (path, content)\n- `append` -- append to a file (path, content)\n- `list` -- list a directory's contents (path)\n- `delete` -- delete a file or directory (path)\n- `exists` -- check whether a path exists (path)\n- `mkdir` -- create a directory, including parents (path)\n\nEvery action is wrapped in error handling -- a bad path returns a clean `[ERROR] ...` string instead of crashing the tool call. Reads are capped at 20,000 characters to avoid blowing up the response on huge files."
+}
